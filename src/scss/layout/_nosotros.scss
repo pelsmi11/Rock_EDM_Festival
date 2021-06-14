@@ -1,0 +1,68 @@
+.nosotros {
+  text-align: center;
+  margin: $separacion 0;
+  h3 {
+    margin-bottom: $separacion;
+  }
+}
+
+.equipo__contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $separacion;
+
+  @include desktop {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: $separacion;
+  }
+}
+
+.equipo__contenedor--miembro {
+  @include tablet {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: $separacion/8;
+    padding: $separacion/8;
+  }
+  justify-content: center;
+  align-items: center;
+  
+
+  .miembro__imagen img {
+    margin: 0;
+  }
+  .miembro__informacion {
+    justify-content: center;
+    align-items: center;
+    padding: $separacion/4;
+  }
+}
+
+.miembro__nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: $bold;
+  font-size: 3rem;
+  
+  span {
+    font-weight: $regular;
+    font-size: 2rem;
+  }
+}
+
+.btn-instagram{
+    background-color: $rosa;
+    color: $blanco;
+    padding: 1rem 3rem;
+    margin-bottom: 1rem;
+    font-weight: $bold;
+    border-radius: 0.5rem;
+
+    @include tablet {
+        font-size: 2.5rem;
+        font-weight: $black;
+    }
+}

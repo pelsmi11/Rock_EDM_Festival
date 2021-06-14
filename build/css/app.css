@@ -386,6 +386,9 @@ h3 {
       color: #fef46d; }
     @media (min-width: 768px) {
       .navegacion-principal a {
+        font-size: 1.6rem; } }
+    @media (min-width: 1200px) {
+      .navegacion-principal a {
         font-size: 2rem; } }
 
 .video {
@@ -596,6 +599,61 @@ h3 {
       text-align: center;
       color: #fff;
       font-size: 3rem; }
+
+.nosotros {
+  text-align: center;
+  margin: 5rem 0; }
+  .nosotros h3 {
+    margin-bottom: 5rem; }
+
+.equipo__contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem; }
+  @media (min-width: 1200px) {
+    .equipo__contenedor {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem; } }
+
+.equipo__contenedor--miembro {
+  justify-content: center;
+  align-items: center; }
+  @media (min-width: 768px) {
+    .equipo__contenedor--miembro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 0.625rem;
+      padding: 0.625rem; } }
+  .equipo__contenedor--miembro .miembro__imagen img {
+    margin: 0; }
+  .equipo__contenedor--miembro .miembro__informacion {
+    justify-content: center;
+    align-items: center;
+    padding: 1.25rem; }
+
+.miembro__nombre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+  font-size: 3rem; }
+  .miembro__nombre span {
+    font-weight: 400;
+    font-size: 2rem; }
+
+.btn-instagram {
+  background-color: #f53756;
+  color: #fff;
+  padding: 1rem 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem; }
+  @media (min-width: 768px) {
+    .btn-instagram {
+      font-size: 2.5rem;
+      font-weight: 900; } }
 
 .footer {
   background-color: #f53756;

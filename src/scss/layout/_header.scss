@@ -48,6 +48,9 @@
             color: $amarillo;
         }
         @include tablet {
+            font-size: 1.6rem;
+        }
+        @include desktop {
             font-size: 2rem;
         }
     }
