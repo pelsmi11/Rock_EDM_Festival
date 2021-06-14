@@ -24,6 +24,8 @@
         color: $negro;
         font-size: 2rem;
         font-weight: $delgada;
+        padding-top: 2rem;
+        
 
         &:after{
             content: '';
@@ -36,6 +38,7 @@
             background-position: center center;
         }
     }
+    
 }
 
 .edm .nombre-escenario{
