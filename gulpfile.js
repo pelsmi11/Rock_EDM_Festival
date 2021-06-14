@@ -3,13 +3,15 @@ const sass = require('gulp-sass');
 const imagemin = require('gulp-imagemin');
 const notify = require('gulp-notify');
 const webp = require('gulp-webp');
+const concat = require('gulp-concat')
 
 //Funcion de copilar SASS
 
 const paths = {
     imagenes: 'src/img/**/*',
     scss: 'src/scss/**/*.scss',
-    img: './build/img'
+    img: './build/img',
+    js: 'src/js/**/*.js'
 }
 
 function css(){
@@ -25,6 +27,12 @@ function minificarcss(){
         outputStyle: 'compressed'
     }))
     .pipe( dest('./build/css'));
+}
+
+function javascript(){
+    return src(paths.js)
+    .pipe(concat('bundle.js'))
+    .pipe(dest('./build/js'));
 }
 
 function imagenes(){
@@ -43,11 +51,13 @@ function versionWebp(){
 
 function watchArchivos(){
     watch(paths.scss, css);// *  = La carpeta actual ---- **= Todoso los archivos con esa extension
+    watch(paths.js, javascript);
 }
 
 exports.css = css;
 exports.minificarcss = minificarcss;
 exports.imagenes = imagenes;
 exports.watchArchivos = watchArchivos;
+exports.javascript = javascript;
 
-exports.default = series( css, imagenes, versionWebp, watchArchivos);
+exports.default = series( css, javascript, imagenes, versionWebp, watchArchivos);
